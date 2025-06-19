@@ -1,0 +1,99 @@
+{
+  "name": "cursor-auto-approve",
+  "displayName": "Cursor Auto Approve",
+  "description": "Automatically detects and clicks 'Continue' prompts when Cursor asks for user input, eliminating manual intervention during AI agent workflows.",
+  "version": "1.0.0",
+  "publisher": "cursor-extensions",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "cursor",
+    "auto-approve",
+    "continue",
+    "automation",
+    "tool-runs"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cursorAutoApprove.toggle",
+        "title": "Toggle Auto Approve",
+        "category": "Cursor Auto Approve"
+      },
+      {
+        "command": "cursorAutoApprove.trigger",
+        "title": "Trigger Auto Approve Now",
+        "category": "Cursor Auto Approve"
+      },
+      {
+        "command": "cursorAutoApprove.showStatus",
+        "title": "Show Status",
+        "category": "Cursor Auto Approve"
+      },
+      {
+        "command": "cursorAutoApprove.showActivityLog",
+        "title": "Show Activity Log",
+        "category": "Cursor Auto Approve"
+      }
+    ],
+    "configuration": {
+      "title": "Cursor Auto Approve",
+      "properties": {
+        "cursorAutoApprove.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable automatic approval of continue prompts"
+        },
+        "cursorAutoApprove.showNotifications": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show notifications when auto-approve is triggered"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "publish": "vsce publish",
+    "pretest": "npm run compile && npm run lint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "test:old": "node ./out/test/runTest.js",
+    "lint": "eslint \"src/**/*.{ts,tsx}\" \"src/test/**/*.ts\""
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.19.1",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^8.34.1",
+    "@typescript-eslint/parser": "^8.34.1",
+    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/ui": "^3.2.4",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.29.0",
+    "glob": "^11.0.3",
+    "happy-dom": "^18.0.1",
+    "mocha": "^11.6.0",
+    "typescript": "^4.9.4",
+    "vitest": "^3.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/user/cursor-auto-approve.git"
+  },
+  "author": "",
+  "license": "MIT"
+}

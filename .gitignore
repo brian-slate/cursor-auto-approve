@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# VS Code Test Files
+.vscode-test/
+
+# Build output
+out/
+dist/
+
+# Runtime files
+*.log
+
+# IDE files
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
