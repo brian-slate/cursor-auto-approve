@@ -16,6 +16,9 @@ dist/
 .vscode/launch.json
 .vscode/tasks.json
 
+# Release files (exclude from root, but allow in releases/ folder)
+/*.vsix
+
 # OS files
 .DS_Store
 Thumbs.db

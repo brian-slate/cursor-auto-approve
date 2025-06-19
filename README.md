@@ -4,14 +4,18 @@ Automatically clicks the "Continue" button when AI agents hit Cursor's 25 tool u
 
 ## 🚀 Installation
 
+### From Releases
+
+Download the latest `.vsix` file from the [`releases/`](./releases/) folder or [GitHub Releases](https://github.com/brian-slate/cursor-auto-approve/releases).
+
 ```bash
-cursor --install-extension cursor-auto-approve-1.0.0.vsix
+cursor --install-extension releases/cursor-auto-approve-2.1.0.vsix
 ```
 
 Or install via Cursor UI:
 1. Open Command Palette (`Cmd+Shift+P` / `Ctrl+Shift+P`)
 2. Type "Extensions: Install from VSIX"
-3. Select the `cursor-auto-approve-1.0.0.vsix` file
+3. Select the downloaded `.vsix` file from the `releases/` folder
 
 ## ✨ Features
 
@@ -133,6 +137,6 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 
-**Version**: 1.0.0  
+**Version**: 2.1.0  
 **Compatible with**: Cursor IDE  
-**Package Size**: 482KB 
+**Package Size**: ~500KB
