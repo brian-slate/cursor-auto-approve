@@ -2,7 +2,7 @@
   "name": "cursor-auto-approve",
   "displayName": "Cursor Auto Approve",
   "description": "Automatically detects and clicks 'Continue' prompts when Cursor asks for user input, eliminating manual intervention during AI agent workflows.",
-  "version": "1.0.0",
+  "version": "2.1.0",
   "publisher": "cursor-extensions",
   "engines": {
     "vscode": "^1.74.0"
@@ -42,6 +42,21 @@
         "command": "cursorAutoApprove.showActivityLog",
         "title": "Show Activity Log",
         "category": "Cursor Auto Approve"
+      },
+      {
+        "command": "cursorAutoApprove.testOCR",
+        "title": "Test OCR Detection",
+        "category": "Cursor Auto Approve"
+      },
+      {
+        "command": "cursorAutoApprove.testClick",
+        "title": "Test Native Clicking",
+        "category": "Cursor Auto Approve"
+      },
+      {
+        "command": "cursorAutoApprove.showOCRStatus",
+        "title": "Show OCR Status",
+        "category": "Cursor Auto Approve"
       }
     ],
     "configuration": {
@@ -73,6 +88,11 @@
     "test:coverage": "vitest run --coverage",
     "test:old": "node ./out/test/runTest.js",
     "lint": "eslint \"src/**/*.{ts,tsx}\" \"src/test/**/*.ts\""
+  },
+  "dependencies": {
+    "screenshot-desktop": "^1.15.0",
+    "tesseract.js": "^5.1.1",
+    "sharp": "^0.33.2"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
